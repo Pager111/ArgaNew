@@ -765,12 +765,13 @@ p {
 #gallery.has-video-bg{
   position: relative;
   color:#fff;
-  padding-top:80px; padding-bottom:190px;
+  padding-top:60px; padding-bottom:330px;
   overflow:hidden;
 }
 
 #gallery .video-bg{
   position:absolute; inset:0; z-index:0; overflow:hidden;
+	
 }
 #gallery .video-bg__media{
   position:absolute; top:50%; left:50%;
