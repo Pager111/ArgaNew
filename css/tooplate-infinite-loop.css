@@ -223,7 +223,7 @@ blockquote {
 
 .tm-down-arrow-link {
   display: block;
-  margin-top: 18%;
+  margin-top: 0%;
 }
 
 .tm-down-arrow {
@@ -584,7 +584,7 @@ figure.effect-honey:hover h2 i {
 }
 
 .tm-footer {
-  background: #010101;
+  background: transparent;
 	position: static;
   bottom: 35px;
   left: 0;
@@ -703,7 +703,7 @@ p {
   position: relative;
   color: #fff;                 /* teks default putih di atas video */
   padding-top: 40px;           /* sudah ada via .tm-section-pad-top */
-  padding-bottom: 40px;
+  padding-bottom: 80px;
   overflow: hidden;
 }
 
@@ -1160,7 +1160,7 @@ figure.effect-honey{
 	background: #292121;
   position: relative;
   overflow: hidden;
-  padding: 180px 20px;              /* ruang atas/bawah */
+  padding: 240px 20px;              /* ruang atas/bawah */
   color: #fff;
 }
 
@@ -2554,7 +2554,11 @@ background: linear-gradient(45deg, #E41E26, #f1f1f1);
 }
 
 /* ===== VIDEO BACKGROUND LAYER (ganti bg gradient -> video) ===== */
-.has-video-bg1 .video-bg1{ position:absolute; inset:0; z-index:0; overflow:hidden; }
+.has-video-bg1 .video-bg1{ 
+	position:absolute; 
+	inset:0; 
+	z-index:0; 
+	overflow:hidden; }
 .video-bg__media1{
   position:absolute; top:50%; left:50%;
   min-width:100%; min-height:100%; width:auto; height:auto;
