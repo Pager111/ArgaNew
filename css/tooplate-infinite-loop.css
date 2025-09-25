@@ -1375,7 +1375,7 @@ figure.effect-honey{
   position: absolute;
   top: 80px;                  /* sedikit keluar frame biar dramatis */
   left: 40px;
-  z-index: 4;                  /* DI BAWAH konten (z=5/6), DI ATAS overlay/shape (z=0–3) */
+  z-index: 3;                  /* DI BAWAH konten (z=5/6), DI ATAS overlay/shape (z=0–3) */
   pointer-events: none;        /* tidak mengganggu klik di bawahnya */
 }
 
@@ -2465,7 +2465,7 @@ figure.effect-honey{
   padding: 16px;
   border-radius: 8px;
   background: linear-gradient(90deg, rgba(228,30,38,.12), rgba(1,1,1,.08));
-  border: 1px solid rgba(228,30,38,.25);
+  border: 5px solid #E41E26;
   box-shadow: inset 0 0 20px rgba(228,30,38,.1);
 }
 
@@ -2537,7 +2537,7 @@ background: linear-gradient(45deg, #E41E26, #f1f1f1);
 
 /* Deco images clone */
 .td-deco1, .td-dec11{ position:absolute; inset:0; z-index:1; pointer-events:none; }
-.td-deco1 img{ position:absolute; right:2%; top:8%; width:min(26vw,420px); opacity:.75; }
+.td-deco1 img{ position:absolute; right:2%; top:8%; width:min(26vw,420px); opacity:1.15; }
 .td-dec11 img{ position:absolute; left:4%; bottom:6%; width:min(30vw,520px); opacity:.15; filter:blur(0.4px); }
 
 /* Particles clone */
@@ -2602,3 +2602,157 @@ background: linear-gradient(45deg, #E41E26, #f1f1f1);
   transform: translateY(-2px);
 }
 
+/* Highligh di hero */
+.hero-highlight{
+  position: absolute;      /* lepas dari flow */
+	font: "BankGothicMdBT", system-ui;
+	font-weight: 100;
+  left: 50%;
+  bottom: calc(24px + env(safe-area-inset-bottom)); /* aman di iPhone notch */
+  transform: translateX(-50%); /* tetap center horizontal */
+  margin: 0;               /* buang margin atas bawaan */
+  width: calc(100% - 40px);
+  max-width: 1280px;
+  z-index: 4;              /* di atas efek BG */
+}
+
+
+
+/* Style khusus untuk <select> yang pakai class .tm-input */
+select.tm-input{
+  background: rgba(255,255,255,.08);  /* default gelap */
+  color:#fff;
+  border:1px solid #fff;
+  border-radius:6px;
+  appearance:none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  padding-right: 40px;                /* ruang untuk caret */
+}
+
+/* Saat hover/focus: tetap gelap + aksen */
+select.tm-input:hover,
+select.tm-input:focus{
+  background: rgba(255,255,255,.12);
+  outline:none;
+  box-shadow: 0 0 0 2px rgba(228,30,38,.5) inset; /* aksen merah */
+}
+
+/* Dropdown list (Chrome/Edge/Firefox) */
+select.tm-input option,
+select.tm-input optgroup{
+  background:#0b1a24;   /* gelap */
+  color:#fff;           /* teks putih */
+}
+
+/* Tambahkan caret custom biar nggak default putih Safari/Chrome */
+.select-wrap{
+  position: relative;
+}
+.select-wrap::after{
+  content:"";
+  position:absolute; right:14px; top:50%; transform:translateY(-50%);
+  width:0; height:0; pointer-events:none;
+  border-left:6px solid transparent;
+  border-right:6px solid transparent;
+  border-top:8px solid #fff;            /* panah putih */
+  opacity:.85;
+}
+
+#tarra-defence .td-deco3{
+  position: absolute;
+  top: 20px;                  /* sedikit keluar frame biar dramatis */
+  left: 40px;
+  z-index: 4;                  /* DI BAWAH konten (z=5/6), DI ATAS overlay/shape (z=0–3) */
+  pointer-events: auto;        /* tidak mengganggu klik di bawahnya */
+}
+
+#tarra-defence .td-deco3 img{
+  width: min(22vw, 320px);     /* besar di desktop, tapi tetap responsif */
+  height: auto;
+  opacity: .90;                /* samar agar tak “meniban” teks/kartu */
+  filter: drop-shadow(0 12px 36px rgba(0,0,0,.55)); /* kedalaman halus */
+  /* Jika PNG dominan putih dan mau nyala di bg gelap, bisa coba:
+     mix-blend-mode: screen; 
+  */
+}
+
+#tarra-earth .td-deco4{
+  position: absolute;
+  top: 20px;                  /* sedikit keluar frame biar dramatis */
+  left: 40px;
+  z-index: 4;                  /* DI BAWAH konten (z=5/6), DI ATAS overlay/shape (z=0–3) */
+  pointer-events: auto;        /* tidak mengganggu klik di bawahnya */
+}
+#tarra-earth .td-deco4 a{ display:inline-block; }
+#tarra-earth .td-deco4 img{
+  width: min(22vw, 320px);     /* besar di desktop, tapi tetap responsif */
+  height: auto;
+  opacity: .90;                /* samar agar tak “meniban” teks/kartu */
+  filter: drop-shadow(0 12px 36px rgba(0,0,0,.55)); /* kedalaman halus */
+  /* Jika PNG dominan putih dan mau nyala di bg gelap, bisa coba:
+     mix-blend-mode: screen; 
+  */
+}
+
+
+/* Link TARRA: warna merah + glitch */
+.hero-highlight .glitch-link{
+  position:relative;
+  display:inline-block;
+  color:#E41E26;
+  font-weight:900;
+  text-decoration:none;
+  text-shadow:0 0 10px rgba(228,30,38,.35);
+}
+.hero-highlight .glitch-link::before,
+.hero-highlight .glitch-link::after{
+  content: attr(data-text);
+  position:absolute; left:0; top:0;
+  pointer-events:none;
+  mix-blend-mode: screen;           /* nyala di bg gelap */
+  opacity:.8;
+}
+.hero-highlight .glitch-link::before{
+  transform: translate(1px,0);
+  color:#00B2FF;                    /* channel biru */
+  clip-path: inset(0 0 0 0);
+  animation:glitchShift 2.2s steps(18) infinite;
+}
+.hero-highlight .glitch-link::after{
+  transform: translate(-1px,0);
+  color:#ff5e00;                    /* channel oranye/merah */
+  clip-path: inset(0 0 0 0);
+  animation:glitchShift 2.2s steps(18) infinite reverse;
+}
+
+/* Speed up saat hover/focus */
+.hero-highlight .glitch-link:hover::before,
+.hero-highlight .glitch-link:hover::after,
+.hero-highlight .glitch-link:focus-visible::before,
+.hero-highlight .glitch-link:focus-visible::after{
+  animation-duration: 1.2s;
+}
+
+/* Aksesibilitas fokus */
+.hero-highlight .glitch-link:focus-visible{
+  outline: none;
+  text-shadow:
+    0 0 6px #E41E26,
+    0 0 14px rgba(228,30,38,.7);
+}
+
+/* Keyframes: potong acak baris untuk efek glitch */
+@keyframes glitchShift{
+  0%   { clip-path: inset(0    0 85% 0); transform: translate( 1px,-1px); }
+  10%  { clip-path: inset(60%  0 20% 0); transform: translate(-2px, 1px); }
+  20%  { clip-path: inset(10%  0 70% 0); transform: translate( 2px, 0);   }
+  30%  { clip-path: inset(80%  0  5% 0); transform: translate(-1px, 2px); }
+  40%  { clip-path: inset(40%  0 40% 0); transform: translate( 1px,-2px); }
+  50%  { clip-path: inset(20%  0 60% 0); transform: translate( 0,   0);   }
+  60%  { clip-path: inset(70%  0 15% 0); transform: translate(-1px, 1px); }
+  70%  { clip-path: inset(5%   0 85% 0); transform: translate( 2px,-1px); }
+  80%  { clip-path: inset(50%  0 30% 0); transform: translate(-2px, 0);   }
+  90%  { clip-path: inset(15%  0 70% 0); transform: translate( 1px, 2px); }
+  100% { clip-path: inset(0    0 85% 0); transform: translate( 0,   0);   }
+}
