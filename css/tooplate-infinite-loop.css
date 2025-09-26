@@ -2756,3 +2756,61 @@ select.tm-input optgroup{
   90%  { clip-path: inset(15%  0 70% 0); transform: translate( 1px, 2px); }
   100% { clip-path: inset(0    0 85% 0); transform: translate( 0,   0);   }
 }
+
+/* === Mobile tuning (≤576px) === */
+@media (max-width: 576px){
+
+  /* 1) Judul & subjudul di posisi paling atas, tepat di bawah navbar */
+  #infinite { 
+    height: auto; 
+    min-height: unset; 
+    padding-bottom: 48px; 
+  }
+  #infinite .tm-hero-text-container{
+    /* dorong konten ke atas dan beri jarak aman dari navbar fixed */
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    padding-top: calc(64px + 16px); /* 64px ≈ tinggi navbar; sesuaikan jika perlu */
+  }
+  .tm-hero-text-container-inner{ 
+    margin-top: 0; 
+  }
+  .hero-fit{ 
+    margin: 0 auto; 
+    padding: 0 12px;
+  }
+
+  /* 2) Perkecil semua teks agar pas di layar kecil */
+  html, body { font-size: 14px; }           /* basis lebih kecil */
+  p, li, .tm-intro-text, .td-subtitle, 
+  .td-subtitle1 { font-size: 0.95rem; }
+  .tm-font-big { font-size: 1.05rem; }
+
+  /* Title & subtitle hero lebih kompak */
+  .tm-hero-title{
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+    letter-spacing: .02em;
+    text-shadow: none;
+    -webkit-text-stroke: 0;                 /* buang stroke agar lebih tajam di mobile */
+  }
+  .tm-hero-subtitle{
+    font-size: clamp(.85rem, 3.8vw, 1.05rem);
+    letter-spacing: .06em;
+    text-shadow: none;
+  }
+
+  /* Kotak highlight di hero pindah ke alur normal agar tidak menutupi konten */
+  .hero-highlight{
+    position: static;
+    transform: none;
+    width: auto;
+    margin: 10px 12px 0;
+  }
+
+  /* 3) Sembunyikan/transparent gradasi-06.png di Tarra Defence */
+  #tarra-defence .td-dec1 img{
+    opacity: 0 !important;       /* atau gunakan display:none; jika ingin benar-benar hilang */
+  }
+}
+
