@@ -2764,7 +2764,7 @@ select.tm-input optgroup{
   #infinite { 
     height: auto; 
     min-height: unset; 
-    padding-bottom: 48px; 
+    padding-bottom: 148px; 
   }
   #infinite .tm-hero-text-container{
     /* dorong konten ke atas dan beri jarak aman dari navbar fixed */
@@ -2813,4 +2813,5 @@ select.tm-input optgroup{
     opacity: 0 !important;       /* atau gunakan display:none; jika ingin benar-benar hilang */
   }
 }
+
 
