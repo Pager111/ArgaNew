@@ -2918,7 +2918,4 @@ select.tm-input optgroup{
     border-width: 1px;
   }
 }
-@media (max-width: 576px){
-  .tm-intro-next{ bottom: 70px; }  /* naikkan arrow supaya tidak ketutup */
-}
 
