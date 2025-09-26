@@ -2771,7 +2771,7 @@ select.tm-input optgroup{
     justify-content: flex-start;
     align-items: center;
     height: auto;
-    padding-top: calc(64px + 16px); /* 64px ≈ tinggi navbar; sesuaikan jika perlu */
+    padding-top: calc(164px + 16px); /* 64px ≈ tinggi navbar; sesuaikan jika perlu */
   }
   .tm-hero-text-container-inner{ 
     margin-top: 0; 
@@ -2813,5 +2813,6 @@ select.tm-input optgroup{
     opacity: 0 !important;       /* atau gunakan display:none; jika ingin benar-benar hilang */
   }
 }
+
 
 
