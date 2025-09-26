@@ -2828,8 +2828,25 @@ select.tm-input optgroup{
   box-shadow:0 12px 30px rgba(228,30,38,.45), inset 0 0 22px rgba(228,30,38,.22);
   border-color:#fff; color:#fff;
 }
-@media (max-width:576px){
-  .cta-competition{ position:fixed; right:14px; bottom:18px; z-index:3000; }
+/* 2) Mobile: ukuran diperkecil + pojok bawah */
+@media (max-width: 576px){
+  .cta-competition{
+    position: fixed;
+    right: 14px; 
+    bottom: 18px; 
+    z-index: 3000;
+
+    /* kecilkan ukuran */
+    font-size: 13px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    letter-spacing: .04em;
+    border-width: 1px;
+
+    /* jaga agar tidak melebar */
+    max-width: 88vw;
+    white-space: nowrap;
+  }
 }
 
 
