@@ -3022,24 +3022,44 @@ select.tm-input optgroup{
  /* .animate-right-bounce { animation: none !important; opacity:1 !important; transform:none !important; }
 } */
 
-@media (max-width: 576px){
-  .hero-highlight1{
-    position: fixed;
-    left: 0; right: 0; bottom: 0;
-    z-index: 3000;
-    margin: 0; padding: 6px 10px;   /* lebih tipis */
-    background: rgba(0,0,0,.35);
-    border-top: 1px solid rgba(228,30,38,.35);
-    backdrop-filter: blur(4px);
-  }
-  .hero-cta{ margin: 0; text-align: center; }
-  .cta-competition{
-    display: inline-block;
-    width: 100%;
-    max-width: 520px;
-    font-size: 12px;               /* lebih kecil */
-    padding: 8px 12px;             /* lebih tipis */
-    border-width: 1px;             /* jangan tebal */
-  }
+/* Desktop: biar tombol ngikut layout biasa */
+.cta-competition{
+  position: static;              /* HAPUS absolute desktop */
+  /* boleh simpan style visual lain (bg, border, dll) */
 }
 
+/* === MOBILE ONLY (≤576px) === */
+@media (max-width: 576px){
+  /* bar transparan di bawah layar */
+  .hero-highlight1{
+    position: fixed;
+    left: 0; right: 0;
+    bottom: env(safe-area-inset-bottom, 0);
+    z-index: 9999;
+    margin: 0; padding: 10px 12px;
+    border-radius: 12px 12px 0 0;
+    background: rgba(0,0,0,.45);
+    border-top: 1px solid rgba(228,30,38,.45);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+
+  .hero-cta{ margin: 0; text-align: center; }
+
+  /* tombol jadi full-width di dalam bar */
+  .hero-highlight1 .cta-competition{
+    position: static !important;   /* override position:absolute/fixed sebelumnya */
+    top: auto; right: auto;        /* nolkan koordinat absolut */
+    display: block;
+    width: 100%;
+    max-width: 520px;              /* boleh kecilkan kalau mau */
+    margin: 0 auto;
+    font-size: 13px;
+    padding: 10px 14px;
+    border-width: 1px;
+    white-space: normal;           /* biar teks bisa turun baris */
+  }
+
+  /* beri ruang konten supaya tidak ketutup bar */
+  body{ padding-bottom: 80px; }
+}
