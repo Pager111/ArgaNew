@@ -2703,8 +2703,7 @@ select.tm-input optgroup{
   color:#E41E26;
   font-weight:900;
   text-decoration:none;
-  text-shadow:0 0 10px rgba(228,30,38,.35);
-} 
+  text-shadow:0 0 10px rgba(228,30,38,.35);} 
 /*.hero-highlight .glitch-link::before,
 .hero-highlight .glitch-link::after{
   content: attr(data-text);
@@ -2977,7 +2976,24 @@ select.tm-input optgroup{
 
 
 
+/* === GALLERY: pakai background gambar (BCG1.png), matikan video === */
+#gallery.has-video-bg .video-bg__media{
+  display: none !important;                      /* sembunyikan <video> */
+}
 
+#gallery .video-bg{
+  background: url('../img/BCG1.png') center/cover no-repeat !important;
+}
+
+/* (opsional) overlay biar teks & kartu makin kebaca di atas gambar */
+#gallery .video-bg__overlay{
+  background: radial-gradient(ellipse at 50% 30%, rgba(0,10,20,.30), rgba(0,10,20,.65)) !important;
+}
+
+/* (opsional) kalau mau efek full di seluruh section, bukan hanya layer video */
+#gallery{
+  background: url('../img/BCG1.png') center/cover no-repeat;
+}
 
 /* === GALLERY ONLY: gambar tetap saat scroll === */
 /* Matikan video bg di gallery */
@@ -3026,4 +3042,30 @@ select.tm-input optgroup{
   .animate-right-bounce { animation: none !important; opacity:1 !important; transform:none !important; }
 }
 
+@media (max-width: 576px){
+  /* Biarkan wrapper kembali normal agar tidak memaksa full bar */
+  .hero-highlight1{
+    position: static;
+    background: transparent;
+    border: 0;
+    padding: 0;
+  }
+  .hero-cta{ margin: 0; text-align: right; }
 
+  .cta-competition{
+    position: fixed;
+    right: 14px;
+    bottom: 18px;
+    z-index: 3000;
+
+    /* KUNCI: jangan 100% lebar */
+    width: auto;
+    max-width: 80vw;       /* biar tidak kepanjangan kalau teks panjang */
+    white-space: nowrap;
+
+    font-size: 13px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border-width: 1px;
+  }
+}
