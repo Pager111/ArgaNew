@@ -2710,7 +2710,7 @@ select.tm-input optgroup{
   position:absolute; left:0; top:0;
   pointer-events:none;
   mix-blend-mode: screen;           
-  opacity:.8; /
+  opacity:.8; 
 }*/
 .hero-highlight .glitch-link::before{
   transform: translate(1px,0);
@@ -2864,8 +2864,8 @@ select.tm-input optgroup{
   position:absolute; left:0; top:0;
   pointer-events:none;
   mix-blend-mode: screen;          
-  opacity:.8; */
-}
+  opacity:.8; 
+} */
 
 /* .hero-highlight1 .glitch-link1::before{
   transform: translate(1px,0);
@@ -3063,3 +3063,49 @@ select.tm-input optgroup{
   /* beri ruang konten supaya tidak ketutup bar */
   body{ padding-bottom: 80px; }
 }
+
+/* ====== FIX: Tombol pendaftaran sizing & posisi ====== */
+
+/* 1) Desktop/default: jangan absolute, biar ukuran natural */
+.cta-competition{
+  position: static !important;      /* override rule lama top:490px dsb */
+  display: inline-flex !important;  /* cegah melebar seperti blok */
+  align-items: center;
+  gap: .25em;
+  width: auto !important;
+  max-width: none !important;
+  padding: 10px 16px !important;    /* kecilkan padding default .btn */
+  font-size: 14px;
+  line-height: 1.15;
+  white-space: nowrap;              /* teks tidak turun baris */
+}
+
+/* 2) Mobile: jadikan tombol melayang kanan-bawah, ukuran ringkas */
+@media (max-width: 576px){
+  .cta-competition{
+    position: fixed !important;
+    right: 14px; 
+    bottom: 18px; 
+    z-index: 3000;
+
+    font-size: 12px;
+    padding: 8px 12px !important;
+    border-radius: 8px;
+
+    width: auto !important;         /* pastikan tidak 100% */
+    max-width: 72vw;                /* jaga jangan lebih 72% lebar layar */
+    white-space: nowrap; 
+  }
+}
+
+/* 3) OPTIONAL: kalau masih keganggu padding .btn global, spesiﬁkkan lebih ketat */
+a.btn.cta-competition{ padding: 8px 12px !important; }
+
+/* ====== FIX: Hilangkan aturan absolute yang bikin melebar ====== */
+.cta-competition{ top:auto !important; left:auto !important; right:auto !important; }
+
+/* ====== FIX: Tutup blok CSS yang rusak di bagian .hero-highlight1 (kurung nyasar) ======
+   Di blok CSS-mu ada komentar yang memutus aturan dan menyisakan "}" sendirian.
+   Tambahkan ini untuk "menormalkan" parser di browser jika sempat terputus.
+*/
+.hero-highlight1 .glitch-link1{ /* tidak mengubah style, hanya memastikan blok valid */ }
