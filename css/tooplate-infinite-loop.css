@@ -2912,10 +2912,11 @@ select.tm-input optgroup{
   .cta-competition{
     display: inline-block;
     width: 100%;
-    max-width: 520px;
+    max-width: 220px;
     font-size: 13px;
     padding: 10px 14px;
     border-width: 1px;
   }
 }
+
 
