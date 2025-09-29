@@ -3083,12 +3083,7 @@ select.tm-input optgroup{
 a.btn.cta-competition{ padding: 8px 12px !important; }
 
 /* ====== FIX: Hilangkan aturan absolute yang bikin melebar ====== */
-.cta-competition{ top:auto !important; left:auto !important; right:auto !important; }
 
-/* ====== FIX: Tutup blok CSS yang rusak di bagian .hero-highlight1 (kurung nyasar) ======
-   Di blok CSS-mu ada komentar yang memutus aturan dan menyisakan "}" sendirian.
-   Tambahkan ini untuk "menormalkan" parser di browser jika sempat terputus.
-*/
-.hero-highlight1 .glitch-link1{ /* tidak mengubah style, hanya memastikan blok valid */ }
+
 
 
