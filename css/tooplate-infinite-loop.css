@@ -2897,27 +2897,7 @@ select.tm-input optgroup{
 } */
 
 
-@media (max-width: 576px){
-  .hero-highlight1{
-    position: fixed;
-    left: 0; right: 0; bottom: 0;
-    z-index: 3000;
-    margin: 0; padding: 10px 12px;
-    border-radius: 12px 12px 0 0;
-    background: rgba(0,0,0,.45);
-    border-top: 1px solid rgba(228,30,38,.45);
-    backdrop-filter: blur(4px);
-  }
-  .hero-cta{ margin: 0; text-align: center; }
-  .cta-competition{
-    display: inline-block;
-    width: 100%;
-    max-width: 520px;
-    font-size: 13px;
-    padding: 10px 14px;
-    border-width: 1px;
-  }
-}
+
 
 
 /* === Hero: rata kiri + animasi masuk dari kiri === */
@@ -3063,7 +3043,7 @@ select.tm-input optgroup{
     max-width: 80vw;       /* biar tidak kepanjangan kalau teks panjang */
     white-space: nowrap;
 
-    font-size: 13px;
+    font-size: 10px;
     padding: 10px 14px;
     border-radius: 8px;
     border-width: 1px;
