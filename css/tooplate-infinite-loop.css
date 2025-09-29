@@ -5815,21 +5815,35 @@ select.tm-input optgroup{
   .hero-cta{ margin: 0; text-align: center; }
 
   /* tombol jadi full-width di dalam bar */
+ /* MOBILE ONLY (≤576px): paksa tombol ikut layout bar, bukan absolut */
+@media (max-width: 576px){
+  .hero-highlight1{
+    position: fixed;
+    left: 0; right: 0;
+    bottom: calc(env(safe-area-inset-bottom, 0) + 8px); /* aman dari notch & toolbar */
+    z-index: 99999;
+    margin: 0; padding: 10px 12px;
+    border-radius: 12px 12px 0 0;
+    background: rgba(0,0,0,.45);
+    border-top: 1px solid rgba(228,30,38,.45);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+
+  /* MATIKAN posisi absolut/fixed pada tombol di mobile */
   .hero-highlight1 .cta-competition{
-    position: static !important;   /* override position:absolute/fixed sebelumnya */
-    top: auto; right: auto;        /* nolkan koordinat absolut */
+    position: static !important;
+    top:auto !important; right:auto !important; bottom:auto !important; left:auto !important;
     display: block;
     width: 100%;
-    max-width: 520px;              /* boleh kecilkan kalau mau */
+    max-width: 520px;
     margin: 0 auto;
     font-size: 13px;
     padding: 10px 14px;
     border-width: 1px;
-    white-space: normal;           /* biar teks bisa turun baris */
+    white-space: normal;
   }
 
-  /* beri ruang konten supaya tidak ketutup bar */
-  body{ padding-bottom: 80px; }
+  /* Tambah ruang bawah konten supaya tidak ketutup bar */
+  body{ padding-bottom: 90px; }
 }
-
-
