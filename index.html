@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
 	  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="/Fav.ico">
-<link rel="shortcut icon" href="/Fav.ico">
+<link rel="icon" href="/fav.ico?v=2" sizes="any">
+
 	  
 <!--
 Tooplate 2117 Infinite Loop
@@ -77,19 +77,19 @@ https://www.tooplate.com/view/2117-infinite-loop
       </nav>
       
       <div class="text-center tm-hero-text-container">
-  <div class="tm-hero-text-container-inner hero-fit">
+  <div class="tm-hero-text-container-inner hero-fit hero-left">
     <h1 class="tm-hero-title">ARGA YASA KIRNA</h1>
     <p class="tm-hero-subtitle">
   <span>DETECT · RESPOND · PROTECT</span><br>
  <!--  <span class="hero-sub-2">Innovative Solutions for Drone Manufacturing</span> -->
 </p>
   </div>
-		 <div class="about-highlight hero-highlight text-center">
+		 <div class="about-highlight hero-highlight text-center will-animate">
     <p class="mb-0">
       ARGA YASA KIRNA is the exclusive distributor in Indonesia for  <a class="glitch-link" href="https://argayasak.wixsite.com/tarra-tech" target="_blank" rel="noopener" data-text="TARRA"> TARRA</a> products, delivering advanced defense and anti-drone technology with international standards.
     </p>
   </div> 
-		  <div class="about-highlight1 hero-highlight1 text-center">
+		  <div class="about-highlight1 hero-highlight1 text-center will-animate">
 	<div class="hero-cta">
   <a class="btn cta-competition" href="pendaftaran.html" target="_blank" rel="noopener">
     Pendaftaran Kompetisi Drone powered by <span class="glitch-link1" data-text="TARRA"> TARRA</span> </a>
@@ -789,6 +789,78 @@ if ($tmGallery.length) {
 })();
 </script>
  
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const targets = [
+    document.querySelector('.about-highlight > p'),              // teks distributor
+    document.querySelector('.hero-highlight1 .hero-cta'),        // kolom/tombol pendaftaran
+    // atau langsung tombolnya:
+    // document.querySelector('.hero-highlight1 .cta-competition')
+  ].filter(Boolean);
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('animate-right-bounce');
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.15 });
+
+  targets.forEach(el => io.observe(el));
+});
+</script>
+
+	
+	  
+	  
+	  <script>
+document.addEventListener('DOMContentLoaded', function(){
+  // cari semua card di section About Us
+  const cards = Array.from(document.querySelectorAll('#whatwedo .about-card'));
+
+  if (!cards.length) return;
+
+  // deteksi mana Vision / Mission via judul h3, fallback ke urutan
+  const getTitle = el => (el.querySelector('h3')?.textContent || '').toLowerCase();
+
+  let visionCard  = cards.find(c => getTitle(c).includes('vision'))  || cards[0];
+  let missionCard = cards.find(c => getTitle(c).includes('mission')) || cards[1] || null;
+
+  // siapkan list target + arah animasi
+  const targets = [];
+  if (visionCard)  targets.push({ el: visionCard,  dir: 'left',  delayClass: 'a-delay-1' });
+  if (missionCard) targets.push({ el: missionCard, dir: 'right', delayClass: 'a-delay-2' });
+
+  // observer: tambahkan kelas saat terlihat
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const t = targets.find(t => t.el === entry.target);
+      if (!t) return;
+      entry.target.classList.add(
+        t.dir === 'left' ? 'animate-left-bounce' : 'animate-right-bounce',
+        t.delayClass
+      );
+      obs.unobserve(entry.target);
+    });
+  }, { threshold: 0.2 });
+
+  targets.forEach(t => io.observe(t.el));
+
+  // fallback: kalau sudah di layar saat load (di atas fold), langsung animasikan
+  targets.forEach(t => {
+    const rect = t.el.getBoundingClientRect();
+    if (rect.top >= 0 && rect.top <= window.innerHeight) {
+      t.el.classList.add(
+        t.dir === 'left' ? 'animate-left-bounce' : 'animate-right-bounce',
+        t.delayClass
+      );
+      io.unobserve(t.el);
+    }
+  });
+});
+</script>
+
 		  
   </body>
 </html>
