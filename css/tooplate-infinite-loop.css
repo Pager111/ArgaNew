@@ -2904,10 +2904,10 @@ select.tm-input optgroup{
   to  { opacity: 1; transform: translateX(0); }
 }
 .hero-left .tm-hero-title{
-  animation: slide-in-left 1.75s ease-out both;
+  animation: slide-in-left 1.75s ease-out .75s both;
 }
 .hero-left .tm-hero-subtitle{
-  animation: slide-in-left 1.75s ease-out .12s both;
+  animation: slide-in-left 1.75s ease-out 1.22s both;
 }
 
 /* respect reduced motion */
@@ -3090,4 +3090,5 @@ a.btn.cta-competition{ padding: 8px 12px !important; }
    Tambahkan ini untuk "menormalkan" parser di browser jika sempat terputus.
 */
 .hero-highlight1 .glitch-link1{ /* tidak mengubah style, hanya memastikan blok valid */ }
+
 
