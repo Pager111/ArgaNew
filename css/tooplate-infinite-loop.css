@@ -5842,8 +5842,10 @@ select.tm-input optgroup{
     padding: 10px 14px;
     border-width: 1px;
     white-space: normal;
+	  z-index: 99999;
   }
 
   /* Tambah ruang bawah konten supaya tidak ketutup bar */
   body{ padding-bottom: 90px; }
 }
+
