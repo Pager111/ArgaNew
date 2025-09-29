@@ -3064,7 +3064,7 @@ select.tm-input optgroup{
 /* 2) Mobile: jadikan tombol melayang kanan-bawah, ukuran ringkas */
 /* -- FIX FINAL: pastikan tombol muncul di mobile -- */
 @media (max-width: 576px){
-  .cta-competition{
+ .hero-cta, .cta-competition{
     position: fixed !important;
     right: 14px !important;
     bottom: calc(18px + env(safe-area-inset-bottom, 0px)) !important;
@@ -3081,6 +3081,7 @@ select.tm-input optgroup{
 
 
 /* ====== FIX: Hilangkan aturan absolute yang bikin melebar ====== */
+
 
 
 
