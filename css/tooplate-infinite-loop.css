@@ -3023,29 +3023,22 @@ select.tm-input optgroup{
 }
 
 @media (max-width: 576px){
-  /* Biarkan wrapper kembali normal agar tidak memaksa full bar */
   .hero-highlight1{
-    position: static;
-    background: transparent;
-    border: 0;
-    padding: 0;
-  }
-  .hero-cta{ margin: 0; text-align: right; }
-
-  .cta-competition{
     position: fixed;
-    right: 14px;
-    bottom: 18px;
+    left: 0; right: 0; bottom: 0;
     z-index: 3000;
-
-    /* KUNCI: jangan 100% lebar */
-    width: auto;
-    max-width: 80vw;       /* biar tidak kepanjangan kalau teks panjang */
-    white-space: nowrap;
-
-    font-size: 10px;
-    padding: 10px 14px;
-    border-radius: 8px;
-    border-width: 1px;
+    margin: 0; padding: 6px 10px;   /* lebih tipis */
+    background: rgba(0,0,0,.35);
+    border-top: 1px solid rgba(228,30,38,.35);
+    backdrop-filter: blur(4px);
+  }
+  .hero-cta{ margin: 0; text-align: center; }
+  .cta-competition{
+    display: inline-block;
+    width: 100%;
+    max-width: 520px;
+    font-size: 12px;               /* lebih kecil */
+    padding: 8px 12px;             /* lebih tipis */
+    border-width: 1px;             /* jangan tebal */
   }
 }
