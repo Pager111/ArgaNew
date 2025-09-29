@@ -2977,24 +2977,7 @@ select.tm-input optgroup{
 
 
 
-/* === GALLERY: pakai background gambar (BCG1.png), matikan video === */
-#gallery.has-video-bg .video-bg__media{
-  display: none !important;                      /* sembunyikan <video> */
-}
 
-#gallery .video-bg{
-  background: url('../img/BCG1.png') center/cover no-repeat !important;
-}
-
-/* (opsional) overlay biar teks & kartu makin kebaca di atas gambar */
-#gallery .video-bg__overlay{
-  background: radial-gradient(ellipse at 50% 30%, rgba(0,10,20,.30), rgba(0,10,20,.65)) !important;
-}
-
-/* (opsional) kalau mau efek full di seluruh section, bukan hanya layer video */
-#gallery{
-  background: url('../img/BCG1.png') center/cover no-repeat;
-}
 
 /* === GALLERY ONLY: gambar tetap saat scroll === */
 /* Matikan video bg di gallery */
@@ -3042,4 +3025,5 @@ select.tm-input optgroup{
   .animate-left-bounce,
   .animate-right-bounce { animation: none !important; opacity:1 !important; transform:none !important; }
 }
+
 
