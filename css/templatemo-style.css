@@ -7,11 +7,12 @@ http://www.templatemo.com/tm-497-upper
 body{
   background-color:#010101;
   color:black;
-  font-family:'Open Sans',Helvetica,Arial,sans-serif;
+  font-family:'Montserrat', 'Open Sans', Helvetica, Arial, sans-serif;
   font-size:17px;
   font-weight:800;
   overflow-x:hidden;
 }
+
 
 ul{padding:0;margin:0;}
 figure{margin:0;}
