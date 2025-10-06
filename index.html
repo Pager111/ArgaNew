@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
 	  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-<link rel="icon" href="/Fav.ico?v=2" sizes="any">
-	  <link rel="icon" type="image/x-icon" href="/Fav.ico">
-<link rel="shortcut icon" href="/Fav.ico">
+	  <!-- di <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="/fav.ico?v=2" sizes="any">
 
 	  
 <!--
@@ -79,7 +80,7 @@ https://www.tooplate.com/view/2117-infinite-loop
       </nav>
       
       <div class="text-center tm-hero-text-container">
-  <div class="tm-hero-text-container-inner hero-fit hero-left">
+  <div class="tm-hero-text-container-inner hero-fit ">
     <h1 class="tm-hero-title">ARGA YASA KIRNA</h1>
     <p class="tm-hero-subtitle">
   <span>DETECT · RESPOND · PROTECT</span><br>
@@ -658,35 +659,35 @@ if ($tmGallery.length) {
 	  </script>
 	  
 	  <script>
-(function(){
+// (function(){
   // ===== Generate Matrix Rain (tema merah) =====
-  function generateMatrixRain(){
-    const matrix = document.getElementById('matrixRain');
-    if(!matrix) return;
+  //function generateMatrixRain(){
+    // const matrix = document.getElementById('matrixRain');
+  //  if(!matrix) return;
 
-    const chars = '01 Δ Ξ Λ ∑ Ω ∏ π √ ∞ ∇ Θ Φ Ψ Σ ⊕ ⊗ ⊖ ⊘ ⊚ ⊛ ≠ ≤ ≥ ∵ ∴ ∫ ≈ ≡ ∂ ∆ ∞'; 
+  //  const chars = '01 Δ Ξ Λ ∑ Ω ∏ π √ ∞ ∇ Θ Φ Ψ Σ ⊕ ⊗ ⊖ ⊘ ⊚ ⊛ ≠ ≤ ≥ ∵ ∴ ∫ ≈ ≡ ∂ ∆ ∞'; 
     // kombinasi “techy” + sedikit Han
 
-    const colWidth = 22;
-    const columns = Math.ceil(window.innerWidth / colWidth);
+  //  const colWidth = 22;
+ //   const columns = Math.ceil(window.innerWidth / colWidth);
 
-    for(let i=0; i<columns; i++){
-      const col = document.createElement('div');
-      col.className = 'matrix-column';
-      col.style.left = (i * colWidth) + 'px';
-      col.style.animationDuration = (10 + Math.random() * 8) + 's';
-      col.style.animationDelay = (Math.random() * 5) + 's';
+   // for(let i=0; i<columns; i++){
+  //    const col = document.createElement('div');
+  //    col.className = 'matrix-column';
+ //     col.style.left = (i * colWidth) + 'px';
+  //    col.style.animationDuration = (10 + Math.random() * 8) + 's';
+  //    col.style.animationDelay = (Math.random() * 5) + 's';
 
-      let text = '';
-      const count = 16 + Math.floor(Math.random() * 16);
-      for(let j=0; j<count; j++){
-        text += chars[Math.floor(Math.random() * chars.length)] + '\n';
-      }
+   //   let text = '';
+    //  const count = 16 + Math.floor(Math.random() * 16);
+   //   for(let j=0; j<count; j++){
+    //    text += chars[Math.floor(Math.random() * chars.length)] + '\n';
+  //    }
 
-      col.textContent = text;
-      matrix.appendChild(col);
-    }
-  }
+ //     col.textContent = text;
+ //     matrix.appendChild(col);
+  //  }
+//  }
 
   
 
