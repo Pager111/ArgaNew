@@ -6,15 +6,15 @@ https://www.tooplate.com/view/2117-infinite-loop
 
 */
 
-@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
 
-body {
-	font-family: "Montserrat", sans-serif;
-	font-size: 1.2em;
-  color: #707070;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+body{
+  background-color:#010101;
+  color:black;
+  font-family:'Montserrat', 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size:17px;
+  font-weight:800;
+  overflow-x:hidden;
 }
 a {
   transition: all 0.3s ease;
@@ -707,7 +707,7 @@ p {
   overflow: hidden;
 }
 
-#whatwedo.has-video-bg .tm-text-primary { color: #fff; } /* judul tetap putih */
+#whatwedo.has-video-bg .tm-text-primary { color: #fff; font-size: 2.35rem; } /* judul tetap putih */
 #whatwedo.has-video-bg .tm-intro-text { color: #e9eef3; } /* body text lembut */
 #whatwedo.has-video-bg .tm-icon { color: #9fd1ff; }       /* ikon aksen */
 
@@ -1175,7 +1175,7 @@ figure.effect-honey{
 
 /* judul & subjudul */
 #tarra-defence .td-title{
-  font-family: 'BankGothicMdBT', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
   font-size: clamp(4rem, 4.2vw, 3rem);
   font-weight: 900;
   text-transform: uppercase;
@@ -1221,7 +1221,7 @@ figure.effect-honey{
     0 0 26px rgba(228,30,38,.25);            /* glow merah halus */
 }
 #tarra-defence .td-card h3{
-  font-family: 'Orbitron', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
   margin: 0 0 8px;
   background: linear-gradient(45deg, #ffffff, #E41E26);
   -webkit-background-clip: text;
@@ -1239,7 +1239,7 @@ figure.effect-honey{
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: .1em;
-  font-family: 'Orbitron', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
   font-weight: 700;
   display: inline-block;
   border-radius: 6px;
@@ -1449,7 +1449,7 @@ figure.effect-honey{
 .cw-media{ position: relative; z-index: 1; }
 
 .cw-title{
-  font-family: "BankGothicMdBT", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   font-weight: 900;
   letter-spacing: .04em;
   font-size: clamp(1.8rem, 3.6vw, 2.4rem);
@@ -2079,7 +2079,7 @@ figure.effect-honey{
 }
 .batara-ribbon .ribbon-title{
   margin: 0; 
-	font-family: "BankGothicMdBT", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+	font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 	font-weight: 800; letter-spacing: .06em;
   font-size: clamp(1.05rem, 2.6vw, 1.25rem); display: inline-block;
 }
@@ -2464,8 +2464,8 @@ figure.effect-honey{
   margin-top: 20px;
   padding: 16px;
   border-radius: 8px;
-  background: linear-gradient(90deg, rgba(228,30,38,.12), rgba(1,1,1,.08));
-  border: 5px solid #E41E26;
+  background: transparent;
+  border: transparent;
   box-shadow: inset 0 0 20px rgba(228,30,38,.1);
 }
 
@@ -2473,7 +2473,7 @@ figure.effect-honey{
 .td-sec1{ position:relative; overflow:hidden; padding:210px 20px; color:#fff; }
 .td-container1{ max-width:1200px; margin:0 auto; position:relative; z-index:5; }
 .td-title1{
-  font-family:'BankGothicMdBT', ui-sans-serif, system-ui, sans-serif;
+  font-family:'Montserrat', ui-sans-serif, system-ui, sans-serif;
   font-size:clamp(2rem,4.2vw,3rem); font-weight:900; text-transform:uppercase;
   letter-spacing:.06em; margin:0 0 14px;
   background:linear-gradient(45deg,#fff,#fff);
@@ -2494,7 +2494,7 @@ background: linear-gradient(45deg, #fff, #fff);
 }
 .td-card1:hover{ transform:translateY(-4px); box-shadow:0 10px 30px rgba(255,94,0,.25); border-color:rgba(0,178,255,.6); }
 .td-card1 h3{
-  font-family:'Orbitron', ui-sans-serif, system-ui, sans-serif;
+  font-family:'Montserrat', ui-sans-serif, system-ui, sans-serif;
   margin:0 0 8px;
   background:linear-gradient(45deg,#ffffff,#FF5E00);
   -webkit-background-clip:text; -webkit-text-fill-color:transparent;
@@ -2503,7 +2503,7 @@ background: linear-gradient(45deg, #fff, #fff);
 .td-cta1{ margin-top:28px; display:flex; gap:16px; flex-wrap:wrap; }
 .td-button1{
   padding:12px 28px; text-decoration:none; text-transform:uppercase; letter-spacing:.1em;
-  font-family:'Orbitron', ui-sans-serif, system-ui, sans-serif; font-weight:700; display:inline-block;
+  font-family:'Montserrat', ui-sans-serif, system-ui, sans-serif; font-weight:700; display:inline-block;
   border-radius:6px; transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
 }
 .td-primary1{ background:linear-gradient(45deg,#e41e26, #010101); color:#fff; box-shadow:0 0 22px rgba(255,94,0,.35); }
@@ -2587,7 +2587,7 @@ background: linear-gradient(45deg, #fff, #fff);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: .1em;
-  font-family: 'Orbitron', ui-sans-serif, system-ui, sans-serif;
+  font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
   font-weight: 700;
   display: inline-block;
   border-radius: 6px;
@@ -2605,7 +2605,7 @@ background: linear-gradient(45deg, #fff, #fff);
 /* Highligh di hero */
 .hero-highlight{
   position: absolute;      /* lepas dari flow */
-	font: "BankGothicMdBT", system-ui;
+	font: "Montserrat", system-ui;
 	font-weight: 100;
   left: 50%;
   bottom: calc(24px + env(safe-area-inset-bottom)); /* aman di iPhone notch */
@@ -2766,13 +2766,16 @@ select.tm-input optgroup{
     min-height: unset; 
     padding-bottom: 148px; 
   }
-  #infinite .tm-hero-text-container{
-    /* dorong konten ke atas dan beri jarak aman dari navbar fixed */
-    justify-content: flex-start;
-    align-items: center;
-    height: auto;
-    padding-top: calc(64px + 16px); /* 64px ≈ tinggi navbar; sesuaikan jika perlu */
-  }
+  /* === HERO: full center === */
+#infinite .tm-hero-text-container{
+  display: flex;
+  justify-content: center;          /* center secara horizontal */
+  align-items: center;              /* center secara vertikal */
+  min-height: calc(100vh - 64px);   /* tinggi layar dikurangi navbar (≈64px) */
+  padding: 16px;
+  text-align: center;               /* teks di tengah */
+}
+
   .tm-hero-text-container-inner{ 
     margin-top: 0; 
   }
@@ -2886,7 +2889,7 @@ select.tm-input optgroup{
   max-width: 900px;                 /* masih dibatasi agar rapi */
   margin: 0;                        /* buang auto-center */
   padding: 0 16px;
-  text-align: left;
+  text-align: center;
 }
 
 .tm-hero-text-container{
@@ -2896,7 +2899,7 @@ select.tm-input optgroup{
 
 /* pastikan teks kiri */
 .hero-left .tm-hero-title,
-.hero-left .tm-hero-subtitle{ text-align: left; }
+.hero-left .tm-hero-subtitle{ text-align: center; }
 
 /* Animasi */
 @keyframes slide-in-left{
@@ -3077,13 +3080,31 @@ select.tm-input optgroup{
   }
 }
 
+/* === HERO: full center === */
+#infinite .tm-hero-text-container{
+  display: flex;
+  justify-content: center;          /* center secara horizontal */
+  align-items: center;              /* center secara vertikal */
+  min-height: calc(100vh - 64px);   /* tinggi layar dikurangi navbar (≈64px) */
+  padding: 16px;
+  text-align: center;               /* teks di tengah */
+}
 
+/* Netralisir offset/margin bawaan yang menggeser posisi */
+#infinite .tm-hero-text-container-inner{
+  margin-top: 0 !important;
+}
 
+#infinite .hero-fit{
+  margin: 0 auto !important;
+}
 
-/* ====== FIX: Hilangkan aturan absolute yang bikin melebar ====== */
+#infinite .hero-left{
+  text-align: center !important;    /* pastikan rata tengah */
+}
 
-
-
-
-
-
+/* Pastikan elemen teksnya juga rata tengah */
+#infinite .tm-hero-title,
+#infinite .tm-hero-subtitle{
+  text-align: center !important;
+}
