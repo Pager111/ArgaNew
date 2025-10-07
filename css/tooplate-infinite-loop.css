@@ -3119,26 +3119,11 @@ select.tm-input optgroup{
 .cta-competition .label-mobile  { display: none  !important; }
 
 @media (max-width: 576px){
-  .cta-competition .label-desktop { display: none  !important; }
-  .cta-competition .label-mobile  { display: inline !important; }
-
-  /* ukuran & posisi tombol kecil di mobile */
-  .hero-cta, .cta-competition{
-    position: absolute !important;
-    right: 4px !important;
-    bottom: calc(18px + env(safe-area-inset-bottom, 0px)) !important;
-    z-index: 10050 !important;
-    display: inline-flex !important;
-    align-items: center;
-    gap: .25em;
-    padding: 8px 12px !important;
-    font-size: 4px !important;
-    line-height: 0.7;
-    border-width: 1px !important;
-    width: auto !important;
-    max-width: 50vw !important;
-    white-space: normal !important;
+  .hero-cta,
+  .cta-competition{
+    display: none !important;   /* override semua rule sebelumnya */
   }
+}
 
   /* opsional: matikan glitch di mobile biar tombol mungil */
   .glitch-link1 { display: none !important; }
@@ -3147,6 +3132,7 @@ select.tm-input optgroup{
 
 	
 	
+
 
 
 
