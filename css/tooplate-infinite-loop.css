@@ -3124,7 +3124,7 @@ select.tm-input optgroup{
 
   /* ukuran & posisi tombol kecil di mobile */
   .hero-cta, .cta-competition{
-    position: fixed !important;
+    position: absolute !important;
     right: 4px !important;
     bottom: calc(18px + env(safe-area-inset-bottom, 0px)) !important;
     z-index: 10050 !important;
@@ -3147,6 +3147,7 @@ select.tm-input optgroup{
 
 	
 	
+
 
 
 
