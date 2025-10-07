@@ -3133,11 +3133,11 @@ select.tm-input optgroup{
     gap: .25em;
     padding: 8px 12px !important;
     font-size: 4px !important;
-    line-height: 1.1;
+    line-height: 0.7;
     border-width: 1px !important;
     width: auto !important;
-    max-width: 70vw !important;
-    white-space: wrap !important;
+    max-width: 50vw !important;
+    white-space: normal !important;
   }
 
   /* opsional: matikan glitch di mobile biar tombol mungil */
@@ -3147,5 +3147,6 @@ select.tm-input optgroup{
 
 	
 	
+
 
 
