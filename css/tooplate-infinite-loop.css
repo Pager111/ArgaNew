@@ -3115,23 +3115,21 @@ select.tm-input optgroup{
 	
 	/* Default: tampilkan label desktop, sembunyikan label mobile */
 /* === FIX FINAL CTA TEXT === */
-.cta-competition .label-desktop { display: inline !important; }
-.cta-competition .label-mobile  { display: none  !important; }
+/* Default: tampil */
+.cta-competition{ display:inline-flex; }
 
-@media (max-width: 768px){
-  .hero-cta,
-  .cta-competition{
-    display: none !important;   /* override semua rule sebelumnya */
-  }
+/* Mobile: sembunyikan (naikkan ke 768 jika perlu) */
+@media (max-width: 576px){
+  .cta-competition{ display:none !important; }
 }
 
-  /* opsional: matikan glitch di mobile biar tombol mungil */
-  .glitch-link1 { display: none !important; }
-}
+
+
 
 
 	
 	
+
 
 
 
