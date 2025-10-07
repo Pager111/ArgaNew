@@ -3137,7 +3137,7 @@ select.tm-input optgroup{
     border-width: 1px !important;
     width: auto !important;
     max-width: 70vw !important;
-    white-space: nowrap !important;
+    white-space: wrap !important;
   }
 
   /* opsional: matikan glitch di mobile biar tombol mungil */
@@ -3147,4 +3147,5 @@ select.tm-input optgroup{
 
 	
 	
+
 
