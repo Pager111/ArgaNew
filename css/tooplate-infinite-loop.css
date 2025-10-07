@@ -2821,12 +2821,12 @@ select.tm-input optgroup{
 .hero-cta{ margin-top: 18px;  }
 .cta-competition{
   display:inline-block; text-transform:uppercase; letter-spacing:.08em;
-  font-weight:600; border-radius:10px; padding:14px 28px;
+  font-weight:500; border-radius:6px; padding:10px 20px; font-size: .8rem;
   color:#fff; background: linear-gradient(45deg,#E41E26,#010101);
   box-shadow:0 0 22px rgba(228,30,38,.35); border:2px solid rgba(228,30,38,.65);
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
-.cta-competition{position:absolute; top:490px; right:124px;}
+.cta-competition{position:absolute; top:400px; right:620px;}
 .cta-competition:hover{ transform:translateY(-2px);
   box-shadow:0 12px 30px rgba(228,30,38,.45), inset 0 0 22px rgba(228,30,38,.22);
   border-color:#fff; color:#fff;
@@ -3101,7 +3101,6 @@ select.tm-input optgroup{
 
 	
 	
-
 
 
 
