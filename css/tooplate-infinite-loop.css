@@ -3067,19 +3067,19 @@ select.tm-input optgroup{
 
 /* 2) Mobile: jadikan tombol melayang kanan-bawah, ukuran ringkas */
 /* -- FIX FINAL: pastikan tombol muncul di mobile -- */
-@media (max-width: 576px){
- .hero-cta, .cta-competition{
-    position: fixed !important;
-    right: 14px !important;
-    bottom: calc(18px + env(safe-area-inset-bottom, 0px)) !important;
-    z-index: 10050 !important;  /* di atas .hero-highlight1 (9999) dan overlay lain */
-    display: inline-flex !important;
-    padding: 8px 12px !important;
-    width: auto !important;
-    max-width: 32vw !important;
-    white-space: nowrap !important;
-  }
-}
+/*@media (max-width: 576px){ */
+ /*.hero-cta, .cta-competition{ */
+   /* position: fixed !important; */
+    /*right: 14px !important; */
+   /* bottom: calc(18px + env(safe-area-inset-bottom, 0px)) !important; */
+  /*  z-index: 10050 !important;  */
+ /*   display: inline-flex !important; */
+ /*   padding: 8px 12px !important; */
+ /*   width: auto !important; */
+ /*   max-width: 32vw !important; */
+ /*   white-space: nowrap !important; */
+ /* } */
+/* } */
 
 /* === HERO: full center === */
 #infinite .tm-hero-text-container{
@@ -3132,7 +3132,7 @@ select.tm-input optgroup{
     align-items: center;
     gap: .25em;
     padding: 8px 12px !important;
-    font-size: 13px !important;
+    font-size: 4px !important;
     line-height: 1.1;
     border-width: 1px !important;
     width: auto !important;
