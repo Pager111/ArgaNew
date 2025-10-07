@@ -3118,7 +3118,7 @@ select.tm-input optgroup{
 .cta-competition .label-desktop { display: inline !important; }
 .cta-competition .label-mobile  { display: none  !important; }
 
-@media (max-width: 576px){
+@media (max-width: 768px){
   .hero-cta,
   .cta-competition{
     display: none !important;   /* override semua rule sebelumnya */
@@ -3132,6 +3132,7 @@ select.tm-input optgroup{
 
 	
 	
+
 
 
 
