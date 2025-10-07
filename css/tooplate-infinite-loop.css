@@ -13,7 +13,7 @@ body{
   color:black;
   font-family:'Montserrat', 'Open Sans', Helvetica, Arial, sans-serif;
   font-size:17px;
-  font-weight:800;
+  font-weight:500;
   overflow-x:hidden;
 }
 a {
@@ -325,7 +325,7 @@ blockquote {
 .tm-section-desc {
   max-width: 650px;
   width: 100%;
-  font-size: 0.9rem;
+  font-size: 1.4rem;
 }
 
 .tm-gallery-container {
@@ -1223,7 +1223,8 @@ figure.effect-honey{
 #tarra-defence .td-card h3{
   font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
   margin: 0 0 8px;
-  background: linear-gradient(45deg, #ffffff, #E41E26);
+  background: #ffffff;
+	font-weight:800;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 	text-shadow: 0 1px 12px rgba(0,0,0,.35);
@@ -2495,8 +2496,8 @@ background: linear-gradient(45deg, #fff, #fff);
 .td-card1:hover{ transform:translateY(-4px); box-shadow:0 10px 30px rgba(255,94,0,.25); border-color:rgba(0,178,255,.6); }
 .td-card1 h3{
   font-family:'Montserrat', ui-sans-serif, system-ui, sans-serif;
-  margin:0 0 8px;
-  background:linear-gradient(45deg,#ffffff,#FF5E00);
+  margin:0 0 8px; font-size: 2.02rem; font-weight:100;
+  background:#ffffff;
   -webkit-background-clip:text; -webkit-text-fill-color:transparent;
 }
 
@@ -3075,7 +3076,7 @@ select.tm-input optgroup{
     display: inline-flex !important;
     padding: 8px 12px !important;
     width: auto !important;
-    max-width: 72vw !important;
+    max-width: 32vw !important;
     white-space: nowrap !important;
   }
 }
@@ -3108,3 +3109,41 @@ select.tm-input optgroup{
 #infinite .tm-hero-subtitle{
   text-align: center !important;
 }
+	
+	
+	
+	
+	/* Default: tampilkan label desktop, sembunyikan label mobile */
+/* === FIX FINAL CTA TEXT === */
+.cta-competition .label-desktop { display: inline !important; }
+.cta-competition .label-mobile  { display: none  !important; }
+
+@media (max-width: 576px){
+  .cta-competition .label-desktop { display: none  !important; }
+  .cta-competition .label-mobile  { display: inline !important; }
+
+  /* ukuran & posisi tombol kecil di mobile */
+  .hero-cta, .cta-competition{
+    position: fixed !important;
+    right: 14px !important;
+    bottom: calc(18px + env(safe-area-inset-bottom, 0px)) !important;
+    z-index: 10050 !important;
+    display: inline-flex !important;
+    align-items: center;
+    gap: .25em;
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+    line-height: 1.1;
+    border-width: 1px !important;
+    width: auto !important;
+    max-width: 70vw !important;
+    white-space: nowrap !important;
+  }
+
+  /* opsional: matikan glitch di mobile biar tombol mungil */
+  .glitch-link1 { display: none !important; }
+}
+
+
+	
+	
