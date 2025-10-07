@@ -3081,6 +3081,17 @@ select.tm-input optgroup{
  /* } */
 /* } */
 
+	/* Default: tampilkan label desktop, sembunyikan label mobile */
+/* === FIX FINAL CTA TEXT === */
+/* Default: tampil */
+.cta-competition{ display:inline-flex; }
+
+/* Mobile: sembunyikan (naikkan ke 768 jika perlu) */
+@media (max-width: 768px){
+  .cta-competition{ display:none !important; }
+}
+
+	
 /* === HERO: full center === */
 #infinite .tm-hero-text-container{
   display: flex;
@@ -3113,22 +3124,13 @@ select.tm-input optgroup{
 	
 	
 	
-	/* Default: tampilkan label desktop, sembunyikan label mobile */
-/* === FIX FINAL CTA TEXT === */
-/* Default: tampil */
-.cta-competition{ display:inline-flex; }
-
-/* Mobile: sembunyikan (naikkan ke 768 jika perlu) */
-@media (max-width: 576px){
-  .cta-competition{ display:none !important; }
-}
-
 
 
 
 
 	
 	
+
 
 
 
