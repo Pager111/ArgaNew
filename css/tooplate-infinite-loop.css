@@ -3008,10 +3008,7 @@ select.tm-input optgroup{
 } */
 
 /* Desktop: biar tombol ngikut layout biasa */
-.cta-competition{
-  position: static;              /* HAPUS absolute desktop */
-  /* boleh simpan style visual lain (bg, border, dll) */
-}
+
 
 /* === MOBILE ONLY (≤576px) === */
 @media (max-width: 576px){
@@ -3033,7 +3030,7 @@ select.tm-input optgroup{
 
   /* tombol jadi full-width di dalam bar */
   .hero-highlight1 .cta-competition{
-    position: static !important;   /* override position:absolute/fixed sebelumnya */
+    position: static ;   /* override position:absolute/fixed sebelumnya */
     top: auto; right: auto;        /* nolkan koordinat absolut */
     display: block;
     width: 100%;
@@ -3052,18 +3049,7 @@ select.tm-input optgroup{
 /* ====== FIX: Tombol pendaftaran sizing & posisi ====== */
 
 /* 1) Desktop/default: jangan absolute, biar ukuran natural */
-.cta-competition{
-  position: static !important;      /* override rule lama top:490px dsb */
-  display: inline-flex !important;  /* cegah melebar seperti blok */
-  align-items: center;
-  gap: .25em;
-  width: auto !important;
-  max-width: none !important;
-  padding: 10px 16px !important;    /* kecilkan padding default .btn */
-  font-size: 14px;
-  line-height: 1.15;
-  white-space: nowrap;              /* teks tidak turun baris */
-}
+
 
 
 	/* Default: tampilkan label desktop, sembunyikan label mobile */
@@ -3115,6 +3101,7 @@ select.tm-input optgroup{
 
 	
 	
+
 
 
 
