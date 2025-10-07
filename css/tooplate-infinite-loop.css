@@ -2581,7 +2581,7 @@ background: linear-gradient(45deg, #fff, #fff);
 /* Responsive clone */
 @media (max-width: 991px){ .td-features1{ grid-template-columns:1fr; } }
 
-.tm-navbar.scroll{ background-color:#fff !important; }
+.tm-navbar.scroll{ background-color:#00FFF4 !important; }
 
 .td-button4 {
   padding: 12px 28px;
@@ -3065,21 +3065,6 @@ select.tm-input optgroup{
   white-space: nowrap;              /* teks tidak turun baris */
 }
 
-/* 2) Mobile: jadikan tombol melayang kanan-bawah, ukuran ringkas */
-/* -- FIX FINAL: pastikan tombol muncul di mobile -- */
-/*@media (max-width: 576px){ */
- /*.hero-cta, .cta-competition{ */
-   /* position: fixed !important; */
-    /*right: 14px !important; */
-   /* bottom: calc(18px + env(safe-area-inset-bottom, 0px)) !important; */
-  /*  z-index: 10050 !important;  */
- /*   display: inline-flex !important; */
- /*   padding: 8px 12px !important; */
- /*   width: auto !important; */
- /*   max-width: 32vw !important; */
- /*   white-space: nowrap !important; */
- /* } */
-/* } */
 
 	/* Default: tampilkan label desktop, sembunyikan label mobile */
 /* === FIX FINAL CTA TEXT === */
@@ -3130,6 +3115,7 @@ select.tm-input optgroup{
 
 	
 	
+
 
 
 
