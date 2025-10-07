@@ -2581,7 +2581,7 @@ background: linear-gradient(45deg, #fff, #fff);
 /* Responsive clone */
 @media (max-width: 991px){ .td-features1{ grid-template-columns:1fr; } }
 
-.tm-navbar.scroll{ background-color:#00FFF4 !important; }
+.tm-navbar.scroll{ background-color:#fff !important; }
 
 .td-button4 {
   padding: 12px 28px;
@@ -3115,6 +3115,7 @@ select.tm-input optgroup{
 
 	
 	
+
 
 
 
